@@ -1,7 +1,9 @@
 function openNavMenu() {
-    document.getElementById('mobileListOfLinks').style.display = 'block'
-}
-
-function closeNavMenu() {
-    document.getElementById('mobileListOfLinks').style.display = 'none'
-}
+    const mobileListOfLinks = document.getElementById('mobileListOfLinks');
+    mobileListOfLinks.style.display = 'block';
+  }
+  
+  function closeNavMenu() {
+    const mobileListOfLinks = document.getElementById('mobileListOfLinks');
+    mobileListOfLinks.style.display = 'none';
+  }

@@ -123,14 +123,14 @@ button:hover {
 
 .mainLinks li:hover {
     color: var(--primaryColor);
-    animation: bounce 0.5s;
+    animation: bounceTwo 0.5s;
 }
 
 .mainLinks li:hover::after {
     width: 100%;
 }
 
-@keyframes bounce {
+@keyframes bounceTwo {
     0% {
         transform: translateY(0);
     }
@@ -185,16 +185,86 @@ nav i {
     top: 0;
     left: 0;
     display: none;
+    animation: slideIn 0.5s ease-in-out forwards;
 }
 
 .mobileListOfLinks i {
     position: absolute;
     top: 40px;
     right: 20px;
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
-/* .mobileListOfLinks .mainLinks {
+.mobileListOfLinks .mainLinks {
     position: absolute;
+    width: 90%;
+    height: 50%;
+    margin-top: 100px;
+    animation: slideUp 0.5s ease-in-out forwards;
+}
+
+.mobileListOfLinks .mainLinks ul {
     width: 100%;
-    height: 100%;
-} */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobileListOfLinks .mainLinks ul li {
+    font-size: 35px;
+    font-weight: 700;
+    padding-left: 30px;
+    line-height: 50px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.mobileListOfLinks .mainLinks ul li:hover {
+    color: white;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
