@@ -1,14 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Title -->
     <title>MoroccoTravel</title>
 </head>
+
 <body>
-    <h1>hello World</h1>
+    <nav class="navFlex">
+        <a href="/">
+            <img class="navLogo" src="/images/Logo.jpg" alt="navLogo">
+        </a>
+        <div class="mainLinks">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/flights">Flights</a>
+                </li>
+                <li>
+                    <a href="car-rentals">Car Rentals</a>
+                </li>
+                <li>
+                    <a href="attractions">Attractions</a>
+                </li>
+            </ul>
+        </div>
+        <div class="languageAndCurrencyAndButtons">
+            <select name="selectLanguage" id="selectLanguage">
+                <option value="EN">English</option>
+                <option value="FR">French</option>
+                <option value="AR">Arabic</option>
+            </select>
+            <select name="selectCurrency" id="selectCurrency">
+                <option value="MAD">MAD</option>
+                <option value="DOLLAR">DOLLAR</option>
+                <option value="EURO">EURO</option>
+            </select>
+            <button>
+                <a href="/register">Register</a>
+            </button>
+            <button>
+                <a href="/login">Login</a>
+            </button>
+        </div>
+        <i onclick="openNavMenu()" class="fa-solid fa-bars fa-2xl" class="navListMobile"
+            style="color: #29299c; cursor: pointer;">
+        </i>
+        <div id="mobileListOfLinks" class="mobileListOfLinks">
+            <i onclick="closeNavMenu()" class="fa-solid fa-xmark fa-2xl" style="color: #ffffff; cursor: pointer;">
+            </i>
+            <div class="mainLinks">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/flights">Flights</a>
+                    </li>
+                    <li>
+                        <a href="car-rentals">Car Rentals</a>
+                    </li>
+                    <li>
+                        <a href="attractions">Attractions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <script src="script.js"></script>
 </body>
+
 </html>

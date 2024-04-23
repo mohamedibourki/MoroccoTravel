@@ -1,0 +1,200 @@
+:root {
+    --primaryColor: #29299C;
+    --primaryColorHover: #171756;
+    --secondaryColor: #f5870a;
+    --borderRadius: 5px;
+    --flexGap: 10px;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.navLogo {
+    width: 100px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+    cursor: pointer;
+
+    display: flex;
+    gap: var(--flexGap);
+
+    white-space: nowrap;
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.languageAndCurrencyAndButtons {
+    display: flex;
+    gap: var(--flexGap);
+}
+
+select {
+    padding: 8px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: var(--borderRadius);
+}
+
+select:focus {
+    border-color: var(--primaryColor);
+    outline: none;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: var(--primaryColor);
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    border: none;
+    border-radius: var(--borderRadius);
+}
+
+button:hover {
+    background-color: var(--primaryColorHover);
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mainLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainLinks ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.mainLinks li {
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.mainLinks li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primaryColor);
+    transition: width 0.3s ease;
+}
+
+.mainLinks li:hover {
+    color: var(--primaryColor);
+    animation: bounce 0.5s;
+}
+
+.mainLinks li:hover::after {
+    width: 100%;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav i {
+    display: none;
+}
+
+.navFlex i {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navFlex ul {
+        display: none;
+    }
+
+    .navFlex select,
+    .navFlex button {
+        display: none;
+    }
+
+    .navFlex i {
+        display: block;
+    }
+
+    .navFlex {
+        margin-right: 20px;
+    }
+}
+
+.mobileListOfLinks {
+    background-color: var(--primaryColor);
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.mobileListOfLinks i {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+/* .mobileListOfLinks .mainLinks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
