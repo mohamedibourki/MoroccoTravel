@@ -268,3 +268,19 @@ nav i {
         transform: translateY(0);
     }
 }
+
+.hero h1 {
+    color: var(--primaryColor);
+    text-align: center;
+    font-size: 40px;
+    margin-block: 0;
+}
+
+.hero h1:first-child {
+    margin-top: 40px;
+}
+
+.hero img {
+    margin-inline: auto;
+    width: 100%;
+}
