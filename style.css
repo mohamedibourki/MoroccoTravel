@@ -284,3 +284,252 @@ nav i {
     margin-inline: auto;
     width: 100%;
 }
+
+section.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid var(--primaryColor);
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+.classes {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.classes h3 {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--primaryColorHover);
+}
+
+h3.mainClass {
+    background-color: var(--primaryColor);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.filterProperties {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    gap: 20px;
+}
+
+.textNearOfImageFilter h2, .textNearOfImageFilter p {
+    margin: 0;
+}
+
+.filterItems {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.descOfFlight {
+    display: flex;
+    align-items: center;
+}
+
+.descOfFlight h4 {
+    margin: 10px 0 0 20px;
+}
+
+.descOfFlight p {
+    margin: 10px 0 0 20px;
+}
+
+.flights {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.textWhyChooseUs .num {
+    background-color: var(--primaryColor);
+    width: fit-content;
+    color: white;
+    padding: 10px;
+    border-radius: 90px;
+    margin-top: 50px;
+}
+
+.textWhyChooseUs .title {
+    margin: 20px 0 0 0;
+    width: 500px;
+    font-size: 30px;
+}
+
+.textWhyChooseUs .para {
+    margin: 10px 0 0 0;
+    width: 600px;
+    font-size: 20px;
+}
+
+.whyChooseUs .child {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.whyChooseUs h1 {
+    font-size: 80px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 80px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.features .child {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.features p {
+    width: 300px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.features .img {
+    width: 300px;
+    text-align: center;
+}
+
+.trending h1 {
+    font-size: 80px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.trending div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.cta h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.cta p {
+    margin: 0 0 10px 0;
+    width: 500px;
+    font-size: 23px;
+}
+
+.notifications {
+    background-color: var(--primaryColor);
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    padding: 50px;
+    border-radius: 60px;
+}
+
+.notifications h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.notifications div {
+    text-align: center;
+}
+
+.notifications p {
+    font-size: 27px;
+    padding-inline: 300px;
+    margin-top: 10px;
+}
+
+.notifications input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    width: 300px;
+    font-size: 20px;
+}
+
+.notifications .flexInputAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer img {
+    width: 100px;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+footer ul {
+    justify-content: space-evenly;
+    text-decoration: underline;
+}
+
+.depart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.departItmes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.flightDetailOrder h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.depart .firstDiv {
+    margin-left: 21%;
+}
+
+.buttonOfFlightDetails {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+iframe {
+    height: 110vh !important;
+}

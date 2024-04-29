@@ -2,99 +2,413 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts (Roboto) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Google Fonts (Roboto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Title -->
-    <title>MoroccoTravel</title>
+  <!-- Title -->
+  <title>MoroccoTravel</title>
 </head>
 
 <body>
-    <nav class="navFlex">
-        <a href="/">
-            <img class="navLogo" src="/images/Logo.jpg" alt="navLogo">
-        </a>
-        <div class="mainLinks">
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/flights">Flights</a>
-                </li>
-                <li>
-                    <a href="car-rentals">Car Rentals</a>
-                </li>
-                <li>
-                    <a href="attractions">Attractions</a>
-                </li>
-            </ul>
-        </div>
-        <div class="languageAndCurrencyAndButtons">
-            <select name="selectLanguage" id="selectLanguage">
-                <option value="EN">English</option>
-                <option value="FR">French</option>
-                <option value="AR">Arabic</option>
-            </select>
-            <select name="selectCurrency" id="selectCurrency">
-                <option value="MAD">MAD</option>
-                <option value="DOLLAR">DOLLAR</option>
-                <option value="EURO">EURO</option>
-            </select>
-            <button>
-                <a href="/register">Register</a>
-            </button>
-            <button>
-                <a href="/login">Login</a>
-            </button>
-        </div>
-        <i onclick="openNavMenu()" class="fa-solid fa-bars fa-2xl" class="navListMobile"
-            style="color: #29299c; cursor: pointer;">
-        </i>
-        <div id="mobileListOfLinks" class="mobileListOfLinks">
-            <i onclick="closeNavMenu()" class="fa-solid fa-xmark fa-2xl" style="color: #ffffff; cursor: pointer;">
-            </i>
-            <div class="mainLinks">
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/flights">Flights</a>
-                    </li>
-                    <li>
-                        <a href="car-rentals">Car Rentals</a>
-                    </li>
-                    <li>
-                        <a href="attractions">Attractions</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navFlex">
+    <a href="/">
+      <img class="navLogo" src="/images/Logo.jpg" alt="navLogo">
+    </a>
+    <div class="mainLinks">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/flights">Flights</a>
+        </li>
+        <li>
+          <a href="car-rentals">Car Rentals</a>
+        </li>
+        <li>
+          <a href="attractions">Attractions</a>
+        </li>
+      </ul>
+    </div>
+    <div class="languageAndCurrencyAndButtons">
+      <select name="selectLanguage" id="selectLanguage">
+        <option value="EN">English</option>
+        <option value="FR">French</option>
+        <option value="AR">Arabic</option>
+      </select>
+      <select name="selectCurrency" id="selectCurrency">
+        <option value="MAD">MAD</option>
+        <option value="DOLLAR">DOLLAR</option>
+        <option value="EURO">EURO</option>
+      </select>
+      <button>
+        <a href="/register">Register</a>
+      </button>
+      <button>
+        <a href="/login">Login</a>
+      </button>
+    </div>
+    <i onclick="openNavMenu()" class="fa-solid fa-bars fa-2xl" class="navListMobile"
+      style="color: #29299c; cursor: pointer;">
+    </i>
+    <div id="mobileListOfLinks" class="mobileListOfLinks">
+      <i onclick="closeNavMenu()" class="fa-solid fa-xmark fa-2xl" style="color: #ffffff; cursor: pointer;">
+      </i>
+      <div class="mainLinks">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/flights">Flights</a>
+          </li>
+          <li>
+            <a href="car-rentals">Car Rentals</a>
+          </li>
+          <li>
+            <a href="attractions">Attractions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section class="hero">
-        <h1>Find And Book</h1>
-        <h1>A Great Experience</h1>
-        <img src="/images/Group 29.svg" alt="heroImage">
-    </section>
+  <section class="hero">
+    <h1>Find And Book</h1>
+    <h1>A Great Experience</h1>
+    <img src="/images/Group 29.svg" alt="AirPlane">
+  </section>
 
-    <script src="script.js"></script>
+  <section class="filter">
+    <div class="classes">
+      <h3 class="h3InsideClass" onclick="filterClass(this)">Economy</h3>
+      <h3 class="h3InsideClass mainClass" onclick="filterClass(this)">Business Class</h3>
+      <h3 class="h3InsideClass" onclick="filterClass(this)">Fast Class</h3>
+    </div>
+
+    <div class="filterItems">
+      <div class="filterProperties">
+        <i class="fa-solid fa-location-dot" style="font-size: 50px;"></i>
+        <div class="textNearOfImageFilter">
+          <h2>Location</h2>
+          <p>Where are you going ?</p>
+        </div>
+      </div>
+      <div class="filterProperties">
+        <i class="fa-solid fa-user" style="font-size: 50px;"></i>
+        <div class="textNearOfImageFilter">
+          <h2>Travelers</h2>
+          <p>Add guests</p>
+        </div>
+      </div>
+      <div class="filterProperties">
+        <i class="fa-solid fa-calendar" style="font-size: 50px;"></i>
+        <div class="textNearOfImageFilter">
+          <h2>Check in</h2>
+          <p>Add date</p>
+        </div>
+      </div>
+      <div class="filterProperties">
+        <i class="fa-solid fa-calendar" style="font-size: 50px;"></i>
+        <div class="textNearOfImageFilter">
+          <h2>Check out</h2>
+          <p>Add date</p>
+        </div>
+      </div>
+      <button><i class="fa-solid fa-magnifying-glass" style="font-size: 25px;"></i></button>
+    </div>
+  </section>
+
+  <section class="flights">
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+    <div class="flight">
+      <div class="imageOfFlight">
+        <img src="/images/pexels-tomáš-malík-3408353 1.png" alt="japan">
+      </div>
+      <div class="descOfFlight">
+        <div>
+          <h4>Tokyo, <span>Japan</span></h4>
+          <p>24,000 onwards.</p>
+        </div>
+        <img class="flightDestination" src="/images/Frame 81.png" alt="flightDestination">
+      </div>
+    </div>
+  </section>
+
+  <section class="whyChooseUs">
+    <h1>Why Choose Us</h1>
+    <div class="child">
+      <div class="textWhyChooseUs">
+        <div class="textItem">
+          <div class="num">01</div>
+          <h3 class="title">Travel Requirements for Dubai</h3>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam
+          </p>
+        </div>
+        <div class="textItem">
+          <div class="num">02</div>
+          <h3 class="title">Multi risk travel insurance</h3>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam
+          </p>
+        </div>
+        <div class="textItem">
+          <div class="num">03</div>
+          <h3 class="title">Travel Requierments By Destination</h3>
+          <p class="para">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam
+          </p>
+        </div>
+      </div>
+      <img src="/images/Group 26.png" alt="widowsOfAirPlane">
+    </div>
+  </section>
+
+  <section class="features">
+    <h1>Features</h1>
+    <div class="child">
+      <div class="feature">
+        <div class="img">
+          <img src="/images/Group 153.png" alt="featureOne">
+        </div>
+        <h2>Book & Relax</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+      <div class="feature">
+        <div class="img">
+          <img src="/images/Group 153.png" alt="featureOne">
+        </div>
+        <h2>Book & Relax</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+      <div class="feature">
+        <div class="img">
+          <img src="/images/Group 153.png" alt="featureOne">
+        </div>
+        <h2>Book & Relax</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trending">
+    <h1>Trending Travelers Of Month</h1>
+    <div>
+      <img src="/images/Rectangle 253.png" alt="">
+      <img src="/images/Rectangle 253.png" alt="">
+      <img src="/images/Rectangle 253.png" alt="">
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <h1>Build Today for Tomorrow's Success</h1>
+      <p>
+        Schedule a 45 minutes meeting and we will help you understand scope of your project, cost to develop and guide
+        you completely on how to expand your business online.
+      </p>
+      <button>
+        <a href="/register">Register</a>
+      </button>
+    </div>
+    <img src="/images/Rectangle 259.png" alt="">
+  </section>
+
+  <div class="notifications">
+    <h1>
+      Subscribe
+      to Get Notified About Latest Deals & Offers
+    </h1>
+    <p>
+      Eu scelerisque amet amet malesuada id ultrices morbi. Vitae purus mauris hac nisi habitasse donec. Vitae integer
+      massa in blandit.
+    </p>
+    <div class="flexInputAndButton">
+      <input type="email" name="email" id="email" placeholder="Email Address">
+      <button>
+        <a href="/register">Subscribe</a>
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    <img src="/images/Logo.jpg" alt="">
+    <p>
+      Eu scelerisque amet amet malesuada id ultrices morbi. Vitae purus mauris hac nisi habitasse donec. Vitae integer
+      massa in blandit.
+    </p>
+    <ul>
+      <li>About</li>
+      <li>Explore</li>
+      <li>Booking</li>
+      <li>Find Ticket</li>
+      <li>Contact Us</li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

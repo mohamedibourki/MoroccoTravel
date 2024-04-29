@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>flightDetails</title>
+</head>
+
+<body>
+    <nav class="navFlex">
+        <a href="/">
+            <img class="navLogo" src="/images/Logo.jpg" alt="navLogo">
+        </a>
+        <div class="mainLinks">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/flights">Flights</a>
+                </li>
+                <li>
+                    <a href="car-rentals">Car Rentals</a>
+                </li>
+                <li>
+                    <a href="attractions">Attractions</a>
+                </li>
+            </ul>
+        </div>
+        <div class="languageAndCurrencyAndButtons">
+            <select name="selectLanguage" id="selectLanguage">
+                <option value="EN">English</option>
+                <option value="FR">French</option>
+                <option value="AR">Arabic</option>
+            </select>
+            <select name="selectCurrency" id="selectCurrency">
+                <option value="MAD">MAD</option>
+                <option value="DOLLAR">DOLLAR</option>
+                <option value="EURO">EURO</option>
+            </select>
+            <button>
+                <a href="/register">Register</a>
+            </button>
+            <button>
+                <a href="/login">Login</a>
+            </button>
+        </div>
+        <i onclick="openNavMenu()" class="fa-solid fa-bars fa-2xl" class="navListMobile"
+            style="color: #29299c; cursor: pointer;">
+        </i>
+        <div id="mobileListOfLinks" class="mobileListOfLinks">
+            <i onclick="closeNavMenu()" class="fa-solid fa-xmark fa-2xl" style="color: #ffffff; cursor: pointer;">
+            </i>
+            <div class="mainLinks">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/flights">Flights</a>
+                    </li>
+                    <li>
+                        <a href="car-rentals">Car Rentals</a>
+                    </li>
+                    <li>
+                        <a href="attractions">Attractions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="flightDetailOrder">
+        <h1>Flight Detail Order</h1>
+        <div class="child">
+            <div class="depart">
+                <div class="firstDiv">
+                    <img src="/images/la_plane-departure.png" alt="">
+                    <p>Departure Flight</p>
+                </div>
+                <div class="departItmes">
+                    <div>
+                        <h2>Mon, 14 Jun 2021</h2>
+                        <p>Economy</p>
+                    </div>
+                    <p>Paris</p>
+                    <img src="/images/la_plane.png" alt="">
+                    <p>London</p>
+                    <img src="/images/image 1.png" alt="">
+                    <p>Indigo</p>
+                    <p>15:45 --</p>
+                    <div>
+                        <p>4h 15min</p>
+                        <p>1 transit</p>
+                    </div>
+                    <p>20:05</p>
+                </div>
+            </div>
+        </div>
+        <div class="child">
+            <div class="depart">
+                <div class="firstDiv">
+                    <img src="/images/la_plane-arrival.png" alt="">
+                    <p>Return Flight</p>
+                </div>
+                <div class="departItmes">
+                    <div>
+                        <h2>Wed, 16 Jun 2021</h2>
+                        <p>Economy</p>
+                    </div>
+                    <p>London</p>
+                    <img src="/images/la_plane.png" alt="">
+                    <p>Paris</p>
+                    <img src="/images/image 1 (1).png" alt="">
+                    <p>SpiceJet</p>
+                    <p>15:45 --</p>
+                    <div>
+                        <p>4h 15min</p>
+                        <p>1 transit</p>
+                    </div>
+                    <p>20:05</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="buttonOfFlightDetails">
+        <button>
+            Continue
+        </button>
+    </div>
+</body>
+
+</html>
