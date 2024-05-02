@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Booking Form</title>
-</head>
+  </head>
 
-<body>
-    <iframe allowTransparency="true" style="min-height:300px; height:inherit; overflow:auto;" width="100%"
-        id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0"
-        src="https://form.123formbuilder.com/my-contact-form-6661709.html?customVars123=yes&hasEmbedFormStyle=1">
-    </iframe>
-</body>
+  <body>
+    <form id="bookingForm" action="/api/booking" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
 
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /> <br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+
+  <script src="script.js"></script>
 </html>
