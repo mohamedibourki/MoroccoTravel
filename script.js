@@ -16,8 +16,8 @@ function filterClass(element) {
   element.classList.add("mainClass");
 }
 
-// stripe api
-// const button = document.querySelector("button");
+// Stripe Api
+// const button = document.querySelector("");
 // button.addEventListener("click", () => {
 //   fetch("http://localhost:3000/create-checkout-session", {
 //     method: "POST",
@@ -41,30 +41,38 @@ function filterClass(element) {
 // });
 
 //database
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   const bookingForm = document.getElementById("bookingForm");
   if (bookingForm) {
-    bookingForm.addEventListener("submit", async function (event) {
+    bookingForm.addEventListener("submit", async (event) => {
       event.preventDefault();
-
-      const name = document.getElementById("name").value;
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const age = document.getElementById("age").value;
+      const phone = document.getElementById("phone").value;
       const email = document.getElementById("email").value;
-
+      const address = document.getElementById("address").value;
+      const city = document.getElementById("city").value;
+      const state = document.getElementById("state").value;
+      const zip = document.getElementById("zip").value;
+      const country = document.getElementById("country").value;
+      const formData = { firstName, lastName, age, phone, email, address, city, state, zip, country };
       try {
-        const response = await fetch("/api/booking", {
+        const response = await fetch("http://localhost:3000/api/booking", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            name,
-            email,
-          }),
+          body: JSON.stringify(formData),
         });
-        const responseData = await response.json();
-        console.log(responseData);
+        if (response.ok) {
+          const responseData = await response.json();
+          console.log("Response data:", responseData);
+        } else {
+          throw new Error(`Network response error: ${response.statusText}`);
+        }
       } catch (error) {
-        console.error(error);
+        console.error("Error:", error);
       }
     });
   } else {
