@@ -1,0 +1,24 @@
+[
+  {
+    "flight_number": "AA101",
+    "flight_destination": "Paris",
+    "depart_city": "Tangier",
+    "flight_depart": "2024-05-10T08:00:00",
+    "flight_return": "2024-05-15T12:00:00",
+    "return_city": "Tangier",
+    "flight_price": 50000,
+    "airplane_id": "A001",
+    "pilot_id": "P001"
+  },
+  {
+    "flight_number": "BA202",
+    "flight_destination": "London",
+    "depart_city": "Tangier",
+    "flight_depart": "2024-06-05T10:30:00",
+    "flight_return": "2024-06-10T14:30:00",
+    "return_city": "Tangier",
+    "flight_price": 70000,
+    "airplane_id": "A002",
+    "pilot_id": "P002"
+  }
+]
